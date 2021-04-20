@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev", "Dev", "{4ECB2ACD-918F-4125-97A3-4F9B7EFADDD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{557DD1EC-F7DE-4535-B599-38DC6965213D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apertium.Net.Test", "Apertium.Net.Test\Apertium.Net.Test.csproj", "{C52784C2-3DB3-43D0-8941-6E701CF4E4CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apertium.Net", "Apertium.Net\Apertium.Net.csproj", "{25BD46BC-1A43-4EC9-9A78-DC1D898E56E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apertium.Net.DevEnv", "Apertium.Net.DevEnv\Apertium.Net.DevEnv.csproj", "{85B36E2F-A230-4EE7-A0CD-751135055558}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{CD3B2521-94A1-43A0-BBDB-52AEA1F09E36}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\CODEOWNERS = ..\CODEOWNERS
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C52784C2-3DB3-43D0-8941-6E701CF4E4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C52784C2-3DB3-43D0-8941-6E701CF4E4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C52784C2-3DB3-43D0-8941-6E701CF4E4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C52784C2-3DB3-43D0-8941-6E701CF4E4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25BD46BC-1A43-4EC9-9A78-DC1D898E56E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25BD46BC-1A43-4EC9-9A78-DC1D898E56E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25BD46BC-1A43-4EC9-9A78-DC1D898E56E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25BD46BC-1A43-4EC9-9A78-DC1D898E56E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B36E2F-A230-4EE7-A0CD-751135055558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B36E2F-A230-4EE7-A0CD-751135055558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B36E2F-A230-4EE7-A0CD-751135055558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B36E2F-A230-4EE7-A0CD-751135055558}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C52784C2-3DB3-43D0-8941-6E701CF4E4CE} = {557DD1EC-F7DE-4535-B599-38DC6965213D}
+		{25BD46BC-1A43-4EC9-9A78-DC1D898E56E6} = {4ECB2ACD-918F-4125-97A3-4F9B7EFADDD7}
+		{85B36E2F-A230-4EE7-A0CD-751135055558} = {4ECB2ACD-918F-4125-97A3-4F9B7EFADDD7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {298E2CAA-9E11-45EC-814C-F019C9A41C11}
+	EndGlobalSection
+EndGlobal
