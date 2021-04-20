@@ -12,6 +12,7 @@
     <AssemblyName>Apertium.Net</AssemblyName>
     <RootNamespace>Apertium.Net</RootNamespace>
     <PackageProjectUrl>https://github.com/vonderborch/Apertium.Net</PackageProjectUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

@@ -34,6 +34,7 @@ _Synchronous (MethodName) and asynchronous (MethodNameAsync) of most metehods ar
 - UpdateDefaultLanguages: Updates the default languages used if none are provided in the Translate command
 - ClearValidPairsCache: Clears the valid language pairs cache
 - UpdateApertiumServer: Updates the client's configured Apertium server
+- GetValidPairsString: Returns back a string representing all valid language pairs
 
 # Future Plans
 See list of issues under the Milestones: https://github.com/vonderborch/Apertium.Net/milestones

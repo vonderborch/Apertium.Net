@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
 
@@ -431,6 +432,30 @@ namespace Apertium.Net
             }
 
             return new List<string>(_toLanguageFromLanguages[toLanguage]);
+        }
+
+        /// <summary>
+        ///     Returns all valid language pairs as a string
+        /// </summary>
+        ///
+        /// <returns>
+        ///     The valid pairs string.
+        /// </returns>
+        public string GetValidPairsString()
+        {
+            if (_validPairs == null)
+            {
+                GetValidPairs();
+            }
+
+            var output = new StringBuilder();
+            var first = true;
+            foreach (var pair in _validPairs)
+            {
+                output.Append(first ? $"({pair.Item1}, {pair.Item2})" : $", ({pair.Item1}, {pair.Item2})");
+            }
+
+            return output.ToString();
         }
     }
 }
