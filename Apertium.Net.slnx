@@ -1,0 +1,31 @@
+<Solution>
+  <Folder Name="/.build/">
+    <Project Path=".build\post_solution_build.csproj" Type="Classic C#">
+      <BuildDependency Project="test\automated\Apertium.Net.Test\Apertium.Net.Test.csproj" />
+    </Project>
+    <Project Path=".build\pre_solution_build.csproj" Type="Classic C#" />
+    <File Path=".build\version_bump.ps1" />
+    <File Path=".build\version_bump_common.ps1" />
+    <File Path=".build\version_bump_dialog.ps1" />
+    <File Path=".build\generate_virtual_environment.py" />
+  </Folder>
+  <Folder Name="/SolutionFiles/">
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="CODEOWNERS" />
+    <File Path="README.md" />
+    <File Path="LICENSE" />
+  </Folder>
+  <Folder Name="/source/">
+    <Project Path="source\Apertium.Net\Apertium.Net.csproj" Type="Classic C#">
+      <BuildDependency Project=".build\pre_solution_build.csproj" />
+    </Project>
+  </Folder>
+  <Folder Name="/test/" />
+  <Folder Name="/test/automated/">
+    <Project Path="test\automated\Apertium.Net.Test\Apertium.Net.Test.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/test/manual/">
+    <Project Path="test\manual\Apertium.Net.DevEnv\Apertium.Net.DevEnv.csproj" Type="Classic C#" />
+  </Folder>
+</Solution>

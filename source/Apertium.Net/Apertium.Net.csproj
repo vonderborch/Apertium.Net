@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Version>2.0.0.56</Version>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Apertium.Net</Title>
+        <Authors>Christian Webber</Authors>
+        <Description>A simple library to help with using Apertium (https://apertium.org/) for machine translation.</Description>
+        <Copyright>(c) 2025</Copyright>
+        <PackageProjectUrl>https://github.com/vonderborch/Apertium.Net</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/vonderborch/Apertium.Net</RepositoryUrl>
+        <PackageTags>Apertium, Machine Translation, Translation</PackageTags>
+        <AssemblyVersion>2.0.0.56</AssemblyVersion>
+        <FileVersion>2.0.0.56</FileVersion>
+        <Company>Christian Webber</Company>
+        <TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <OutputPath>..\..\debug\core</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <OutputPath>..\..\release\core</OutputPath>
+        <DocumentationFile>..\..\release\core\Apertium.Net.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <Link>README.md</Link>
+        </None>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="Powershell Compress-Archive -Path '$(TargetDir)*' -DestinationPath '$(SolutionDir)release\$(ProjectName).zip' -Force" Condition="'$(ConfigurationName)' == 'Release' and '$(OS)' == 'Windows_NT'"/>
+        <Exec Command="pwsh -Command Compress-Archive -Path '$(TargetDir)*' -DestinationPath '$(SolutionDir)release\$(ProjectName).zip' -Force" Condition="'$(ConfigurationName)' == 'Release' and '$(OS)' != 'Windows_NT'"/>
+    </Target>
+</Project>
